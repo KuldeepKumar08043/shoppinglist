@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'udamy-project';
+  loaderFeature = 'recipe';
+  onNavigate(feature: string){
+    this.loaderFeature = feature;
+  }
 }
