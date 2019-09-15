@@ -28,8 +28,14 @@ recipeChanged = new Subject<Recipe[]>();
         ])
       ];
 
-      constructor( private slService: ShoppingListService ) {
+  //private recipes: Recipe[];
 
+      constructor( private slService: ShoppingListService ) {  }
+
+      setRecipe(recipe: Recipe[]) {
+        console.log('recipe = ', recipe);
+        this.recipes = recipe;
+        this.recipeChanged.next(this.recipes.slice());
       }
 
       getRecipe() {
